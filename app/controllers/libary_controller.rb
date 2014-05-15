@@ -1,0 +1,2 @@
+class LibaryController < ApplicationController
+end
