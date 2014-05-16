@@ -53,8 +53,10 @@ gem 'json'
 #typhoeus for running HTTP requests in parallel while encapsulating handling logic
 gem 'typhoeus'
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
+gem 'sidekiq'
+
+gem 'unicorn'
+
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
