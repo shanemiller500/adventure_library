@@ -1,3 +1,9 @@
 <h1>Hello world</h1>
 
 <p>Welcome to the GREAT ADVENTURE APP!!</p>
+
+ <%= link_to "Create New Adventure", new_adventure_libary_path %><br>
+ <% @adventures.each do |adventure| %>
+    <%= link_to adventure.title, adventure_libary_index %><br>
+    <%= adventure.author %><br>
+ <% end %>
