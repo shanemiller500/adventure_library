@@ -5,7 +5,7 @@ AdventureLibrary::Application.routes.draw do
 end
 
   root "adventure#index"
-  post "/adventures/:adventure_id/libary", to: "libary#create"#, as: "new_adv"
+  get "/adventures/:adventure_id/libary", to: "libary#create"#, as: "new_adv"
 #            Prefix Verb   URI Pattern                                         Controller#Action
 #        adventure_pages GET    /adventures/:adventure_id/pages(.:format)           pages#index
 #                        POST   /adventures/:adventure_id/pages(.:format)           pages#create

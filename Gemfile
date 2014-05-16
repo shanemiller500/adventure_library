@@ -21,6 +21,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
@@ -37,6 +39,7 @@ group :test, :development do
   gem 'pry'
   gem 'pry-byebug'
   gem 'dotenv-rails'
+  gem 'better_errors'
 end
 
 # Use ActiveModel has_secure_password
@@ -44,6 +47,7 @@ end
 
 # Use unicorn as the app server
 gem 'unicorn'
+gem 'unicorn-rails'
 
 gem 'sidekiq'
 
@@ -53,9 +57,8 @@ gem 'json'
 #typhoeus for running HTTP requests in parallel while encapsulating handling logic
 gem 'typhoeus'
 
-gem 'sidekiq'
 
-gem 'unicorn'
+
 
 
 # Use debugger
