@@ -1,0 +1,15 @@
+<h1>Hello world</h1>
+
+<p>Welcome to the GREAT ADVENTURE APP!!</p>
+
+ 
+ 
+ <% @adventures.each do |adventure| %><br>
+   Author: <%= adventure.author %><br>
+    <%=  link_to adventure.title, adventure_page_path(adventure, adventure.pages.find_by_name(:start)) %> 
+ <% end %><br><br>
+<%= link_to "see all adventures", libraries_path %>
+
+
+<h2>Add your own adventures</h2>
+<%= link_to "Click to add your Adventures", new_adventure_path %><br>

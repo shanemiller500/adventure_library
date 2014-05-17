@@ -39,7 +39,7 @@ group :test, :development do
   gem 'pry'
   gem 'pry-byebug'
   gem 'dotenv-rails'
-  gem 'better_errors'
+  #gem 'better_errors'
 end
 
 # Use ActiveModel has_secure_password

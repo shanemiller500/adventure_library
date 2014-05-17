@@ -23,12 +23,12 @@ ActiveRecord::Schema.define(version: 20140515231730) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "guid"
-    t.integer  "libary_id"
+    t.integer  "library_id"
   end
 
-  add_index "adventures", ["libary_id"], name: "index_adventures_on_libary_id", using: :btree
+  add_index "adventures", ["library_id"], name: "index_adventures_on_library_id", using: :btree
 
-  create_table "libaries", force: true do |t|
+  create_table "libraries", force: true do |t|
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
