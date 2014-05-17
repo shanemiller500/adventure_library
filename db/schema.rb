@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20140515231730) do
   create_table "adventures", force: true do |t|
     t.string   "title"
     t.string   "author"
-    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "guid"

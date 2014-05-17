@@ -1,7 +1,7 @@
 class AdventuresWorker
   include Sidekiq::Worker
 
-def get_adventures id
+  def perform id
     library = Library.find(id)
     if library
       request = Typhoeus.get(library.url+"/adventures.json")

@@ -17,9 +17,9 @@ class LibrariesController < ApplicationController
   end
 
   def create
-    more_libraries = params.require(:library).permit(:url)
-    library = Library.find_by(url: :more_libraries)
-    LibrariesWorker.perform_async(more_libraries)
+    library_params = params.require(:library).permit(:url)
+     Library.create(library_params) 
+    LibrariesWorker.perform_async(library_params[:url])
     redirect_to "/adventures"
   end
 
