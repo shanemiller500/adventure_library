@@ -10,8 +10,8 @@ class LibrariesWorker
       Library.create(url: url) 
     end
 
-    result.each do |library|
-      LibrariesWorker.perform_async(library['url'])
+    result["libraries"].each do |library|
+      perform(library['url'])
     end
   end
 
