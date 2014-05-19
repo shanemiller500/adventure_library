@@ -22,7 +22,7 @@ end
 def create
     @library = Library.create(library_params)
     if @library.save
-        LibrariesWorker.perform_async(@library.id)
+        LibrariesWorker.perform_async(library.id)
         redirect_to root_path
     else
       flash[:errors] = @library.errors.full_messages

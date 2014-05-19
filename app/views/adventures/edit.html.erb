@@ -1,14 +1,20 @@
-<h1> Edit Adventure </h1>
-
+<h1> Edit This Adventure </h1>
+<div class="edit-box">
 <%= form_for @adventure do |f| %>
-  <%= f.text_field :title, placeholder: 'adventure title' %><br>
-  <%= f.text_field :author, placeholder: 'your name' %><br>
+  <%= f.label :Title %>
+  <%= f.text_field :title, placeholder: 'adventure title',:class => "form-control" %><br>
+  <%= f.label :Author %>
+  <%= f.text_field :author, placeholder: 'your name',:class => "form-control" %><br>
 
-  Add all story lines. You'll be able to set the path on the next page.<br>
+
   <%= f.fields_for :pages, @pages do |b| %>
-    <%= b.text_field :name, placeholder: 'next page title' %>
-    <%= b.text_area :text, placeholder: 'next story line' %><br>
+   <%= f.label :Story %>
+    <%= b.text_area :text, placeholder: 'next story line', :class => "form-control" %><br>
+    <%= f.label :Story_Position%>
+     <%= b.text_field :name, placeholder: 'next page title',:class => "form-control" %><br>
   <% end %>
 
   <%= f.submit  class: "btn btn-primary" %>
 <% end %>
+</div>
+<p>Back to <a href="/adventures">Shane's Adventures</a></p>

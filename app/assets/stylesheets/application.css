@@ -61,7 +61,7 @@ box-shadow: 3px 10px 10px 10px rgba(39, 39, 32, 0.34);
 background-color: rgba(0, 0, 0, 0.15);
 text-align: left;
 width: 357px;
-margin-left: 42px;
+margin-left: 26px;
 display: inline-block;
 border-radius: 12px 12px 12px 12px;
 box-shadow: 3px 10px 10px 10px rgba(14, 14, 13, 0.21);
@@ -72,7 +72,7 @@ background-color: rgba(0, 0, 0, 0.15);
 text-align: left;
 width: 357px;
 margin-top: 40px;
-margin-left: 42px;
+margin-left: 26px;
 display: inline-block;
 border-radius: 12px 12px 12px 12px;
 box-shadow: 3px 10px 10px 10px rgba(14, 14, 13, 0.21);
@@ -83,7 +83,19 @@ box-shadow: 3px 10px 10px 10px rgba(14, 14, 13, 0.21);
 text-align: center;
 min-width: 356px;
 margin-top: 180px;
-margin-left: 443px;
+margin-left: 257px;
+display: inline-block;
+float: left;
+border-radius: 12px 12px 12px 12px;
+box-shadow: 3px 10px 10px 10px rgba(153, 152, 130, 0.36);
+}
+
+.edit-box {
+  background-color: rgba(245, 243, 243, 0.61);
+text-align: center;
+min-width: 356px;
+margin-top: 20px;
+margin-left: 469px;
 display: inline-block;
 float: left;
 border-radius: 12px 12px 12px 12px;

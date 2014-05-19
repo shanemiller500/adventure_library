@@ -21,7 +21,7 @@ class AdventuresController < ApplicationController
     adventure = params.require(:adventure).permit(:title, :author, :pages_attributes => [:name, :text])
     adv = Adventure.create(adventure)
     adv.update_attributes(guid: SecureRandom.urlsafe_base64(10).to_s)
-     AdventureWorker.perform_async(library['url'])
+     AdventureWorker.perform_async(library['library_id'])
     redirect_to adventures_path
   end 
 
