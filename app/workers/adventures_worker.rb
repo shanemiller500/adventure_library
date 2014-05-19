@@ -1,27 +1,18 @@
+
 class AdventuresWorker
   include Sidekiq::Worker
 
-  def perform id
+  def perform(library_id)
     library = Library.find(library_id)
-    if library
-      request = Typhoeus.get(library.url+"/adventures.json")
-      result = JSON.parse(request.body)
-
-      if result
-        result['adventures'].each do |adventure|
-          existing_story = Adventure.find_by(guid: adventure["guid"])
-          binding.pry
-          if existing_story
-            # pages = adventure['pages']
-            # adventure.['pages'].delete
-            # existing_story.update_attributes(adventure)
-            
-          else
-            library.adventures.create(adventure)
-          end
-        end
+    response = Typhoeus.get("#{library.url}/adventures.json")
+    @adventures = JSON.parse(response.body)
+    @adventures['adventures'].each do |adv|
+      if Adventure.find_by(guid: adv['guid'])
+      else
+        library.adventures.create(title: adv['title'],
+         author: adv['author'], guid: adv['guid'],
+          pages_attributes => adv[:pages])
       end
     end
-end
-
+  end
 end

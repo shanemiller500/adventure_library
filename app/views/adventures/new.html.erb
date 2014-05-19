@@ -1,17 +1,17 @@
 <h1>Welcome to the amazing Adventure page</h1>
-<h2>Add a new advnture to the library</h2>
+<p>Add a new advnture to the library</p>
 
-<div>
+<div class="inside-box1">
 <%= form_for @adventure do |f| %>
   <%= f.label :Title %>
-  <%= f.text_field :title %> <br><br>
+  <%= f.text_field :title, :class =>"form-control" %> <br><br>
   <%= f.label :Author %>
-  <%= f.text_area :author %> <br><br>
-
-
-
+  <%= f.text_field :author, :class =>"form-control" %> <br><br>
+  <%= f.label :Story %>
+  <%= f.text_area :author, :class =>"form-control" %> <br><br>
   <%= f.submit "Create!" %>
  <% end %>
 
 </div>
+<p>Back to <a href="/adventures">Shane's Adventures</a></p>
 

@@ -51,6 +51,8 @@ gem 'unicorn-rails'
 
 gem 'sidekiq'
 
+gem 'foreman'
+
 #json for API usage
 gem 'json'
 

@@ -10,4 +10,82 @@
  *
  *= require_self
  *= require_tree .
+ *= require_bootstrap
  */
+
+ p {
+  text-align: center;
+ }
+ h1 {
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+ }
+body {
+  background-image: url('faces.jpg'); 
+}
+
+.inside-box {
+background-color: rgba(0, 0, 0, 0.15);
+text-align: left;
+min-width: 356px;
+margin-left: 20px;
+display: inline-block;
+float: left;
+border-radius: 12px 12px 12px 12px;
+box-shadow: 3px 10px 10px 10px rgba(153, 152, 130, 0.36);
+}
+
+.inside-box1 {
+background-color: rgba(0, 0, 0, 0.15);
+text-align: left;
+min-width: 356px;
+margin-left: 489px;
+display: inline-block;
+float: left;
+border-radius: 12px 12px 12px 12px;
+box-shadow: 3px 10px 10px 10px rgba(153, 152, 130, 0.36);
+}
+
+
+.adventure {
+background-color: rgba(0, 0, 0, 0.15);
+text-align: left;
+float: right;
+margin-right: 57px;
+width: 357px;
+border-radius: 12px 12px 12px 12px;
+box-shadow: 3px 10px 10px 10px rgba(39, 39, 32, 0.34);
+}
+
+.add-url {
+background-color: rgba(0, 0, 0, 0.15);
+text-align: left;
+width: 357px;
+margin-left: 42px;
+display: inline-block;
+border-radius: 12px 12px 12px 12px;
+box-shadow: 3px 10px 10px 10px rgba(14, 14, 13, 0.21);
+}
+
+.see-all{
+background-color: rgba(0, 0, 0, 0.15);
+text-align: left;
+width: 357px;
+margin-top: 40px;
+margin-left: 42px;
+display: inline-block;
+border-radius: 12px 12px 12px 12px;
+box-shadow: 3px 10px 10px 10px rgba(14, 14, 13, 0.21);
+}
+
+.pages-show {
+  background-color: rgba(245, 243, 243, 0.61);
+text-align: center;
+min-width: 356px;
+margin-top: 180px;
+margin-left: 443px;
+display: inline-block;
+float: left;
+border-radius: 12px 12px 12px 12px;
+box-shadow: 3px 10px 10px 10px rgba(153, 152, 130, 0.36);
+}

@@ -5,7 +5,7 @@
 
 <%= form_for @library do |f| %>
   <%= f.label "Add Library" %><br>
-  <%= f.text_field , placeholder: "Add website here" %>
+  <%= f.text_field , placeholder: "Add website here", :class =>"form-control" %>
   <%= f.submit "Add Now" %>
 <% end %>
 

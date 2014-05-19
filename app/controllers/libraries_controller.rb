@@ -17,11 +17,21 @@ class LibrariesController < ApplicationController
   end
 
   def create
-    library_params = params.require(:library).permit(:url)
-    binding.pry
-     Library.create(library_params) 
-    LibrariesWorker.perform_async(library_params[:url])
-    redirect_to "/adventures"
+
+    @library = Library.create(library_params)
+    if @library.save
+      LibrariesWorker.perform_async(@library.id)
+      redirect_to libraries_path
+    else
+      flash[:errors] = @library.errors.full_messages
+      render :new
+    end
+ 
   end
+
+  private
+    def library_params
+      params.require(:library).permit(:url)
+    end
 
 end

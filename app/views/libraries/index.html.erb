@@ -1,14 +1,11 @@
 <h1>Welcome to the adventure page</h1>
+ <p>Have fun....</p>
+ <p>Back to <a href="/adventures">Shane's Adventures</a></p>
+<div class="inside-box1">
+<h1> All libraries </h1>
+<br>
+<% @libraries.each do |l| %>
+  <br><%= link_to l.url, l.url, :class => 'btn btn-danger' %><br> 
+<% end %>
 
-<p>Have fun....</p>
-
-
-<p>Check out all the <a href="/adventures">adventures</a></p>
-<h1> Your Libraries index </h1>
-
-<% @libraries.each do |f|%>
-  <li>
-    <%= f.url %>
-
-  </li>
-  <% end %>
+</div>
